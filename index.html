@@ -1,47 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtuosa Charme</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link para o arquivo CSS -->
+    <title>Virtuosa Charme - Makeup & Cosméticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #ffe4e1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header img {
+            max-width: 150px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ffb6c1;
+            padding: 10px 0;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #800000;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .banner {
+            background: url('https://via.placeholder.com/1200x400') no-repeat center;
+            background-size: cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner h1 {
+            font-size: 3rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #ffe4e1;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Bem-vindo ao Virtuosa Charme</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-        </nav>
+        <img src="/mnt/data/Logo%20Virtuosa%20Charme.png" alt="Logo Virtuosa Charme">
     </header>
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Nosso site está em construção. Volte em breve!</p>
-        </section>
-        <section id="about">
-            <h2>Sobre</h2>
-            <p>Informações sobre a Virtuosa Charme.</p>
-        </section>
-        <section id="contact">
-            <h2>Contato</h2>
-            <form id="contact-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensagem:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-    </main>
+
+    <nav>
+        <a href="#">Início</a>
+        <a href="#makeup">Maquiagem</a>
+        <a href="#skincare">Skincare</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <section class="banner">
+        <h1>Bem-vindo à Virtuosa Charme</h1>
+    </section>
+
+    <div class="container">
+        <h2 id="makeup">Maquiagem</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Produto de Maquiagem">
+                <h3>Batom Matte</h3>
+                <p>R$29,90</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Produto de Maquiagem">
+                <h3>Base Líquida</h3>
+                <p>R$59,90</p>
+            </div>
+        </div>
+
+        <h2 id="skincare">Skincare</h2>
+        <div class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Produto de Skincare">
+                <h3>Hidratante Facial</h3>
+                <p>R$39,90</p>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Produto de Skincare">
+                <h3>Sérum Vitamina C</h3>
+                <p>R$89,90</p>
+            </div>
+        </div>
+
+        <h2 id="contato">Contato</h2>
+        <p>Email: contato@virtuosacharme.com.br</p>
+        <p>Telefone: (XX) XXXX-XXXX</p>
+    </div>
+
     <footer>
-        <p>&copy; 2025 Virtuosa Charme</p>
+        <p>&copy; 2025 Virtuosa Charme. Todos os direitos reservados.</p>
     </footer>
-    <script src="scripts.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
