@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtuosa Charme</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
 </head>
 <body>
-    <h1>Bem-vindo ao Virtuosa Charme</h1>
-    <p>Nosso site está em construção. Volte em breve!</p>
+    <header>
+        <h1>Bem-vindo ao Virtuosa Charme</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Nosso site está em construção. Volte em breve!</p>
+        </section>
+        <section id="about">
+            <h2>Sobre</h2>
+            <p>Informações sobre a Virtuosa Charme.</p>
+        </section>
+        <section id="contact">
+            <h2>Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Virtuosa Charme</p>
+    </footer>
+    <script src="scripts.js"></script> <!-- Link para o arquivo JavaScript -->
 </body>
 </html>
