@@ -13,31 +13,52 @@
         }
 
         header {
-            background-color: #cdb3a6;
-            padding: 20px;
+            background: linear-gradient(90deg, #cdb3a6, #8b5e3c);
+            padding: 20px 0;
             text-align: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         header img {
-            max-width: 200px;
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 10px 0 0;
+            font-family: "Georgia", serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin: 5px 0;
+            font-style: italic;
+            color: #fce9db;
         }
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #cdb3a6;
+            background-color: #8b5e3c;
             padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
             margin: 0 15px;
             text-decoration: none;
-            color: #4d3b30;
+            color: #fff;
             font-weight: bold;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: #8b5e3c;
+            color: #fce9db;
         }
 
         .hero {
@@ -130,6 +151,8 @@
 <body>
     <header>
         <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
+        <h1>Virtuosa Charme</h1>
+        <p>Beleza e sofisticação em cada detalhe</p>
     </header>
 
     <nav>
