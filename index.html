@@ -13,11 +13,13 @@
         }
 
         header {
-            background: linear-gradient(90deg, #cdb3a6, #8b5e3c);
-            padding: 20px 0;
-            text-align: center;
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 10px; /* Espaçamento uniforme */
+                padding: 15px 0;
+
         }
 
         header img {
@@ -63,27 +65,18 @@
         }
 
        .hero {
-    background: linear-gradient(90deg, rgba(203,179,166,0.8), rgba(139,94,60,0.8)), 
-                url('virtusacharme.github.io/images/fundo.jpg') no-repeat center;
+       background: linear-gradient(90deg, rgba(203, 179, 166, 0.8), rgba(139, 94, 60, 0.8)), 
+                url('images/hero-background.jpg') no-repeat center;
     background-size: cover;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    border: 4px solid #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 50px 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 15px 25px;
-    border-radius: 10px;
-    font-family: "Georgia", serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 10px;
+
 }
 
         .container {
@@ -179,18 +172,21 @@
     <div class="container">
         <h2 class="section-title">Categorias</h2>
         <div class="grid">
-            <div class="card">
-                <img src="images/maquiagem.png" alt="Maquiagem">
-                <h3>Maquiagem</h3>
-                <p>Descubra produtos incríveis para realçar sua beleza.</p>
-                <a href="produtos.html#maquiagem">Ver Mais</a>
-            </div>
-            <div class="card">
-                <img src="images/skincare.png" alt="Skincare">
-                <h3>Skincare</h3>
-                <p>Cuidado para a pele com produtos de alta qualidade.</p>
-                <a href="produtos.html#skincare">Ver Mais</a>
-            </div>
+    <div class="card">
+        <img src="images/maquiagem.png" alt="Maquiagem">
+        <h3>Maquiagem</h3>
+        <p>Descubra produtos incríveis para realçar sua beleza.</p>
+        <a href="produtos.html#maquiagem">Ver Mais</a>
+    </div>
+    <div class="promo-banner">
+        <img src="images/promo.jpg" alt="Promoção Especial">
+    </div>
+    <div class="card">
+        <img src="images/skincare.png" alt="Skincare">
+        <h3>Skincare</h3>
+        <p>Cuidado para a pele com produtos de alta qualidade.</p>
+        <a href="produtos.html#skincare">Ver Mais</a>
+    </div>
             <div class="card">
                 <img src="images/acessorios1.png" alt="Acessórios">
                 <h3>Acessórios</h3>
