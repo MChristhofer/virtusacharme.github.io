@@ -19,7 +19,7 @@
         }
 
         header img {
-            max-width: 150px;
+            max-width: 200px;
         }
 
         nav {
@@ -40,16 +40,10 @@
             color: #800000;
         }
 
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .banner {
-            background: url('https://via.placeholder.com/1200x400') no-repeat center;
+        .hero {
+            background: url('https://via.placeholder.com/1920x500') no-repeat center;
             background-size: cover;
-            height: 400px;
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,17 +51,30 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
-        .banner h1 {
-            font-size: 3rem;
+        .hero h1 {
+            font-size: 3.5rem;
         }
 
-        .products {
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
-        .product {
+        .card {
             background-color: white;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -76,72 +83,87 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        .product img {
+        .card img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
 
+        .card h3 {
+            margin: 15px 0;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ffb6c1;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            background-color: #ff69b4;
+        }
+
         footer {
             background-color: #ffe4e1;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
             margin-top: 20px;
         }
 
         footer p {
             margin: 0;
+            color: #555;
         }
+
     </style>
 </head>
 <body>
     <header>
-        <img src="/mnt/data/Logo%20Virtuosa%20Charme.png" alt="Logo Virtuosa Charme">
+        <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
     </header>
 
     <nav>
-        <a href="#">Início</a>
-        <a href="#makeup">Maquiagem</a>
-        <a href="#skincare">Skincare</a>
-        <a href="#contato">Contato</a>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
     </nav>
 
-    <section class="banner">
-        <h1>Bem-vindo à Virtuosa Charme</h1>
+    <section class="hero">
+        <h1>Explore a Beleza com Virtuosa Charme</h1>
     </section>
 
     <div class="container">
-        <h2 id="makeup">Maquiagem</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://via.placeholder.com/250" alt="Produto de Maquiagem">
-                <h3>Batom Matte</h3>
-                <p>R$29,90</p>
+        <h2 class="section-title">Categorias</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Maquiagem">
+                <h3>Maquiagem</h3>
+                <p>Descubra produtos incríveis para realçar sua beleza.</p>
+                <a href="produtos.html#maquiagem">Ver Mais</a>
             </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/250" alt="Produto de Maquiagem">
-                <h3>Base Líquida</h3>
-                <p>R$59,90</p>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Skincare">
+                <h3>Skincare</h3>
+                <p>Cuidado para a pele com produtos de alta qualidade.</p>
+                <a href="produtos.html#skincare">Ver Mais</a>
             </div>
-        </div>
-
-        <h2 id="skincare">Skincare</h2>
-        <div class="products">
-            <div class="product">
-                <img src="https://via.placeholder.com/250" alt="Produto de Skincare">
-                <h3>Hidratante Facial</h3>
-                <p>R$39,90</p>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/250" alt="Produto de Skincare">
-                <h3>Sérum Vitamina C</h3>
-                <p>R$89,90</p>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Acessórios">
+                <h3>Acessórios</h3>
+                <p>Encontre acessórios que complementam seu estilo.</p>
+                <a href="produtos.html#acessorios">Ver Mais</a>
             </div>
         </div>
-
-        <h2 id="contato">Contato</h2>
-        <p>Email: contato@virtuosacharme.com.br</p>
-        <p>Telefone: (XX) XXXX-XXXX</p>
     </div>
 
     <footer>
