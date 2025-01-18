@@ -3,8 +3,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FDF5E6; /* Tom de bege claro */
-    color: #4B2E2E; /* Marrom escuro */
+    background-color: #FAF3E0; /* Tom bege claro da logo */
+    color: #5A3E2B; /* Marrom escuro da logo */
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -19,7 +19,7 @@ body {
 
 /* Cabeçalho */
 header {
-    background-color: #D4AF37; /* Dourado */
+    background-color: #CDAF75; /* Dourado mais suave */
     color: #FFFFFF; /* Branco para contraste */
     padding: 15px;
     text-align: center;
@@ -34,7 +34,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #4B2E2E; /* Marrom escuro */
+    background-color: #5A3E2B; /* Marrom escuro da logo */
 }
 
 nav ul li {
@@ -51,8 +51,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #D4AF37; /* Dourado */
-    color: #4B2E2E; /* Texto marrom */
+    background-color: #CDAF75; /* Dourado mais suave */
+    color: #5A3E2B; /* Marrom escuro */
 }
 
 /* Conteúdo principal */
@@ -62,7 +62,7 @@ main {
 
 section {
     margin-bottom: 20px;
-    border: 1px solid #D4AF37; /* Dourado */
+    border: 1px solid #CDAF75; /* Dourado */
     padding: 15px;
     border-radius: 8px;
     background-color: #FFF9F0; /* Bege mais claro */
@@ -70,8 +70,8 @@ section {
 
 /* Rodapé */
 footer {
-    background-color: #4B2E2E; /* Marrom escuro */
-    color: #FFFFFF;
+    background-color: #5A3E2B; /* Marrom escuro */
+    color: #FFFFFF; /* Branco */
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -95,14 +95,14 @@ form input, form textarea {
     font-size: 16px;
     width: 100%;
     box-sizing: border-box;
-    border: 1px solid #D4AF37; /* Dourado */
+    border: 1px solid #CDAF75; /* Dourado */
     border-radius: 5px;
     background-color: #FFF9F0; /* Bege */
 }
 
 form button {
-    background-color: #D4AF37; /* Dourado */
-    color: #4B2E2E; /* Texto marrom */
+    background-color: #CDAF75; /* Dourado */
+    color: #5A3E2B; /* Marrom escuro */
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -111,6 +111,6 @@ form button {
 }
 
 form button:hover {
-    background-color: #F0C75E; /* Dourado mais claro */
-    color: #4B2E2E;
+    background-color: #D8B36E; /* Dourado mais claro */
+    color: #5A3E2B; /* Marrom escuro */
 }
