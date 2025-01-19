@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virtuosa Charme - Makeup & Cosméticos</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        /* Configuração global */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #0b0b13;
-            color: #fff;
+            box-sizing: border-box;
+        }
+
+        /* Imagem de fundo cobrindo toda a página */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Altura total da viewport */
+            background: url('images/background.jpg') no-repeat center center / cover;
+            color: #fff; /* Cor do texto para contraste */
+            display: flex;
+            flex-direction: column;
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            background: rgba(0, 0, 0, 0.6); /* Fundo semitransparente no cabeçalho */
             padding: 20px;
-            background-color: #15151e;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         header img {
@@ -33,110 +41,39 @@
 
         nav a {
             text-decoration: none;
-            color: #e0d4c3;
-            font-size: 1rem;
-            transition: color 0.3s;
+            color: #f5ebe4;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #c3976e;
+            color: #ffc107;
         }
 
-        .hero {
-            height: 100vh;
-            background: url('images/acessorios.jpg') no-repeat center center/cover;
+        main {
+            flex: 1; /* Ocupa o espaço restante */
             display: flex;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            position: relative;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            padding: 20px;
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero a {
-            padding: 12px 25px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #c3976e;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .hero a:hover {
-            background-color: #9f7454;
-        }
-
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 50px 20px;
-            background-color: #15151e;
-        }
-
-        .category-card {
-            background-color: #1f1f2c;
+        .container {
+            background: rgba(0, 0, 0, 0.7); /* Fundo semitransparente para o conteúdo */
+            padding: 20px;
             border-radius: 10px;
-            overflow: hidden;
+            max-width: 800px;
             text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
-        }
-
-        .category-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .category-card h3 {
-            color: #c3976e;
-            font-size: 1.5rem;
-            margin: 15px 0;
-        }
-
-        .category-card p {
-            color: #e0d4c3;
-            padding: 0 15px;
-            margin-bottom: 20px;
-        }
-
-        .category-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-bottom: 15px;
-            background-color: #c3976e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .category-card a:hover {
-            background-color: #9f7454;
         }
 
         footer {
-            background-color: #15151e;
-            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
             text-align: center;
-            color: #e0d4c3;
+            padding: 15px;
+            color: #f5ebe4;
         }
 
         footer a {
-            color: #c3976e;
+            color: #ffc107;
             text-decoration: none;
         }
 
@@ -157,34 +94,13 @@
         </nav>
     </header>
 
-    <section class="hero">
-        <div>
-            <h1>Virtuosa Charme</h1>
-            <p>Beleza e sofisticação em cada detalhe</p>
-            <a href="produtos.html">Explore Agora</a>
+    <main>
+        <div class="container">
+            <h1>Bem-vindo à Virtuosa Charme</h1>
+            <p>Beleza e sofisticação em cada detalhe.</p>
+            <a href="produtos.html" style="background-color: #ffc107; color: #000; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Explore Agora</a>
         </div>
-    </section>
-
-    <section class="categories">
-        <div class="category-card">
-            <img src="images/maquiagem.png" alt="Maquiagem">
-            <h3>Maquiagem</h3>
-            <p>Descubra produtos incríveis para realçar sua beleza.</p>
-            <a href="produtos.html#maquiagem">Ver Mais</a>
-        </div>
-        <div class="category-card">
-            <img src="images/skincare.png" alt="Skincare">
-            <h3>Skincare</h3>
-            <p>Cuidado para a pele com produtos de alta qualidade.</p>
-            <a href="produtos.html#skincare">Ver Mais</a>
-        </div>
-        <div class="category-card">
-            <img src="images/acessorios.jpg" alt="Acessórios">
-            <h3>Acessórios</h3>
-            <p>Encontre acessórios que complementam seu estilo.</p>
-            <a href="produtos.html#acessorios">Ver Mais</a>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 Virtuosa Charme. Todos os direitos reservados.</p>
