@@ -35,6 +35,7 @@
 
         header img {
             max-width: 150px;
+            height: auto;
         }
 
         nav {
@@ -69,7 +70,7 @@
         }
 
         .mobile-nav {
-            display: none; /* Oculta o menu mobile por padrão */
+            display: none;
             position: absolute;
             top: 60px;
             left: 0;
@@ -81,7 +82,7 @@
         }
 
         .mobile-nav.active {
-            display: block; /* Mostra o menu quando a classe active está presente */
+            display: block;
         }
 
         .mobile-nav a {
@@ -101,11 +102,22 @@
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                gap: 10px;
+                padding: 0;
+            }
+
+            header img {
+                max-width: 100%; /* Logo ocupa toda a largura do cabeçalho */
+                height: auto;
             }
 
             .menu-toggle {
                 display: flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
             }
 
             nav {
@@ -115,7 +127,7 @@
 
         @media (max-width: 480px) {
             header img {
-                max-width: 120px;
+                max-width: 100%; /* Mantém o ajuste para telas menores */
             }
 
             nav a {
@@ -249,11 +261,11 @@
                 <a href="contato.html">Contato</a>
             </nav>
             <div class="mobile-nav">
-                <a href="index.html">Início</a>
-                <a href="produtos.html">Produtos</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="blog.html">Blog</a>
-                <a href="contato.html">Contato</a>
+                <a href="index.html" onclick="closeMenu()">Início</a>
+                <a href="produtos.html" onclick="closeMenu()">Produtos</a>
+                <a href="sobre.html" onclick="closeMenu()">Sobre</a>
+                <a href="blog.html" onclick="closeMenu()">Blog</a>
+                <a href="contato.html" onclick="closeMenu()">Contato</a>
             </div>
         </div>
     </header>
@@ -261,7 +273,12 @@
     <script>
         function toggleMenu() {
             const mobileNav = document.querySelector('.mobile-nav');
-            mobileNav.classList.toggle('active'); // Adiciona ou remove a classe active
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.remove('active');
         }
     </script>
 
