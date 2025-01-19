@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #0b0b13;
             color: #fff;
+            overflow-x: hidden;
         }
 
         header {
@@ -139,83 +140,96 @@
             background-color: #9f7454;
         }
 
+       footer {
+        background-color: #15151e;
+        padding: 20px 10px;
+        text-align: center;
+        color: #e0d4c3;
+        width: 100%;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    footer a {
+        color: #c3976e;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .hero a {
+            font-size: 0.9rem;
+        }
+
+        .category-card h3 {
+            font-size: 1.25rem;
+        }
+
+        .category-card p {
+            font-size: 1rem;
+        }
+
+        .categories {
+            padding: 30px 10px;
+        }
+
         footer {
-            background-color: #15151e;
-            padding: 20px;
-            text-align: center;
-            color: #e0d4c3;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header img {
+            max-width: 100px;
         }
 
-        footer a {
-            color: #c3976e;
-            text-decoration: none;
+        .hero h1 {
+            font-size: 2rem;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        .hero p {
+            font-size: 1rem;
         }
 
-        /* Media Queries */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.2rem;
-            }
-
-            .hero a {
-                font-size: 0.9rem;
-            }
-
-            .category-card h3 {
-                font-size: 1.25rem;
-            }
-
-            .category-card p {
-                font-size: 1rem;
-            }
-
-            .categories {
-                padding: 30px 10px;
-            }
-
-            footer {
-                padding: 15px;
-            }
+        .hero a {
+            font-size: 0.9rem;
+            padding: 10px 20px;
         }
 
-        @media (max-width: 480px) {
-            header img {
-                max-width: 100px;
-            }
+        .category-card h3 {
+            font-size: 1.1rem;
+        }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
+        .category-card p {
+            font-size: 0.9rem;
+        }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero a {
-                font-size: 0.9rem;
-                padding: 10px 20px;
-            }
-
-            .category-card h3 {
-                font-size: 1.1rem;
-            }
-
-            .category-card p {
-                font-size: 0.9rem;
-            }
+        footer {
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+    }
         }
     </style>
 </head>
