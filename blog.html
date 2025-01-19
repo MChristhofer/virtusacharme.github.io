@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Virtuosa Charme</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -27,4 +27,54 @@
                 <a href="produtos.html" onclick="closeMenu()">Produtos</a>
                 <a href="sobre.html" onclick="closeMenu()">Sobre</a>
                 <a href="blog.html" onclick="closeMenu()">Blog</a>
-                <a href="contato.html" onclick="closeMenu(
+                <a href="contato.html" onclick="closeMenu()">Contato</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Nosso Blog</h1>
+            <p>Inspire-se com dicas, tendências e novidades do mundo da beleza.</p>
+        </div>
+    </section>
+
+    <section class="blog-posts">
+        <div class="post">
+            <img src="images/blog1.jpg" alt="Imagem do post 1">
+            <h2>5 Dicas para uma Pele Perfeita</h2>
+            <p>Descubra os segredos para manter sua pele saudável e radiante todos os dias.</p>
+            <a href="post1.html">Leia Mais</a>
+        </div>
+        <div class="post">
+            <img src="images/blog2.jpg" alt="Imagem do post 2">
+            <h2>Maquiagem para Eventos Especiais</h2>
+            <p>Aprenda técnicas de maquiagem para arrasar em qualquer ocasião.</p>
+            <a href="post2.html">Leia Mais</a>
+        </div>
+        <div class="post">
+            <img src="images/blog3.jpg" alt="Imagem do post 3">
+            <h2>Tendências de Beleza 2025</h2>
+            <p>Confira as novidades que estão em alta no universo da beleza este ano.</p>
+            <a href="post3.html">Leia Mais</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Virtuosa Charme. Todos os direitos reservados.</p>
+        <p><a href="contato.html">Fale Conosco</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
