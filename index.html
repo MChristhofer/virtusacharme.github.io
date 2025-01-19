@@ -23,16 +23,17 @@
         }
 
         .header-container {
-            max-width: 1200px; /* Limite de largura */
-            margin: 0 auto; /* Centraliza o cabeçalho */
-            padding: 10px 20px; /* Espaçamento interno */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         header img {
-            max-width: 150px;
+            max-width: 120px;
+            height: auto;
         }
 
         nav {
@@ -41,19 +42,19 @@
         }
 
         nav a {
-        text-decoration: none;
-        color: #e0d4c3;
-        font-size: 1.25rem; /* Aumentado de 1rem para 1.25rem */
-        font-weight: bold; /* Adicionado para dar mais destaque */
-        transition: color 0.3s;
-    }
+            text-decoration: none;
+            color: #e0d4c3;
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-    nav a:hover {
-        color: #c3976e;
+        nav a:hover {
+            color: #c3976e;
         }
 
         .hero {
-            margin-top: 80px; /* Compensa a altura do cabeçalho fixo */
+            margin-top: 80px;
             height: 100vh;
             background: url('images/background.jpg') no-repeat center center/cover;
             display: flex;
@@ -65,13 +66,13 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 20px;
         }
 
@@ -152,6 +153,69 @@
 
         footer a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .hero a {
+                font-size: 0.9rem;
+            }
+
+            .category-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .category-card p {
+                font-size: 1rem;
+            }
+
+            .categories {
+                padding: 30px 10px;
+            }
+
+            footer {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                max-width: 100px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .hero a {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+
+            .category-card h3 {
+                font-size: 1.1rem;
+            }
+
+            .category-card p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
