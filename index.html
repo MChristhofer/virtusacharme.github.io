@@ -35,7 +35,6 @@
 
         header img {
             max-width: 150px;
-         
         }
 
         nav {
@@ -54,292 +53,112 @@
         nav a:hover {
             color: #c3976e;
         }
-        .menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 5px;
-        cursor: pointer;
-    }
-         .menu-toggle div {
-        width: 30px;
-        height: 5px;
-        background-color: #e0d4c3;
-        border-radius: 5px;
-    }
- .mobile-nav {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        right: 0;
-        background-color: rgba(21, 21, 30, 0.9);
-        text-align: center;
-        padding: 20px 0;
-        z-index: 999;
-    }
-
-    .mobile-nav a {
-        display: block;
-        margin: 15px 0;
-        font-size: 1.5rem;
-        color: #e0d4c3;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .mobile-nav a:hover {
-        color: #c3976e;
-    }
-
-    /* Ajustes responsivos */
-    @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-            align-items: flex-start;
-        }
 
         .menu-toggle {
-            display: flex;
-        }
-
-        nav {
             display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 5px;
+            background-color: #e0d4c3;
+            border-radius: 5px;
         }
 
         .mobile-nav {
-            display: block;
-        }
-    }
-
-    @media (max-width: 480px) {
-        header img {
-            max-width: 120px;
-        }
-
-        nav a {
-            font-size: 1rem;
-        }
-    }
-        
-        
-        .hero {
-            margin-top: 80px;
-            height: 100vh;
-            background: url('images/background.jpg') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 20px;
-        }
-
-        .hero a {
-            padding: 12px 25px;
-            font-size: 1rem;
-            color: #fff;
-            background-color: #c3976e;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .hero a:hover {
-            background-color: #9f7454;
-        }
-
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            padding: 50px 20px;
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
             background-color: rgba(21, 21, 30, 0.9);
-        }
-
-        .category-card {
-            background-color: #1f1f2c;
-            border-radius: 10px;
-            overflow: hidden;
             text-align: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
+            padding: 20px 0;
+            z-index: 999;
         }
 
-        .category-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .category-card h3 {
-            color: #c3976e;
-            font-size: 1.5rem;
+        .mobile-nav a {
+            display: block;
             margin: 15px 0;
-        }
-
-        .category-card p {
+            font-size: 1.5rem;
             color: #e0d4c3;
-            padding: 0 15px;
-            margin-bottom: 20px;
-        }
-
-        .category-card a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-bottom: 15px;
-            background-color: #c3976e;
-            color: white;
+            font-weight: bold;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
         }
 
-        .category-card a:hover {
-            background-color: #9f7454;
+        .mobile-nav a:hover {
+            color: #c3976e;
         }
 
-       footer {
-        background-color: #15151e;
-        padding: 20px 10px;
-        text-align: center;
-        color: #e0d4c3;
-        width: 100%;
-    }
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    footer p {
-        margin: 0;
-        font-size: 1rem;
-    }
+            .menu-toggle {
+                display: flex;
+            }
 
-    footer a {
-        color: #c3976e;
-        text-decoration: none;
-    }
+            nav {
+                display: none;
+            }
 
-    footer a:hover {
-        text-decoration: underline;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-        .header-container {
-            flex-direction: column;
-            align-items: flex-start;
+            .mobile-nav {
+                display: block;
+            }
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-        }
+        @media (max-width: 480px) {
+            header img {
+                max-width: 120px;
+            }
 
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        .hero a {
-            font-size: 0.9rem;
-        }
-
-        .category-card h3 {
-            font-size: 1.25rem;
-        }
-
-        .category-card p {
-            font-size: 1rem;
-        }
-
-        .categories {
-            padding: 30px 10px;
-        }
-
-        footer {
-            padding: 15px;
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        header img {
-            max-width: 100px;
-        }
-
-        .hero h1 {
-            font-size: 2rem;
-        }
-
-        .hero p {
-            font-size: 1rem;
-        }
-
-        .hero a {
-            font-size: 0.9rem;
-            padding: 10px 20px;
-        }
-
-        .category-card h3 {
-            font-size: 1.1rem;
-        }
-
-        .category-card p {
-            font-size: 0.9rem;
-        }
-
-        footer {
-            padding: 10px;
-            font-size: 0.8rem;
-        }
-    }
+            nav a {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-    <div class="header-container">
-        <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
-        <div class="menu-toggle" onclick="toggleMenu()">
-            
-   
-<div></div>
-            <div></div>
-            <div></div>
+        <div class="header-container">
+            <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            <div class="mobile-nav">
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
+            </div>
         </div>
-        <nav>
-            
-            
-<a href="index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="blog.html">Blog</a>
-            <a href="contato.html">Contato</a>
-        </nav>
-        <div class="mobile-nav">
-            <a href="index.html">Início</a>
-            <a href="produtos.html">Produtos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="blog.html">Blog</a>
-            <a href="contato.html">Contato</a>
-        </div>
-    </div>
-</header>
-    <script>
-    function toggleMenu() {
-        const mobileNav = document.querySelector('.mobile-nav');
-        mobileNav.style.display = mobileNav.style.display === 'block' ? 'non
+    </header>
 
-    function toggleMenu() {
-        const mobileNav = document.querySelector('.mobile-nav');
-        mobileNav.style.display = mobileNav.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            if (mobileNav.style.display === 'block') {
+                mobileNav.style.display = 'none';
+            } else {
+                mobileNav.style.display = 'block';
+            }
+        }
+    </script>
 
     <section class="hero">
         <div>
