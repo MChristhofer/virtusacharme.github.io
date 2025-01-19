@@ -4,34 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Virtuosa Charme</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Coloque seu CSS em um arquivo externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
-        <h1>Virtuosa Charme</h1>
-        <p>Beleza e sofisticação em cada detalhe</p>
+        <div class="header-container">
+            <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobre.html">Sobre</a>
+                <a href="blog.html">Blog</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+            <div class="mobile-nav">
+                <a href="index.html" onclick="closeMenu()">Início</a>
+                <a href="produtos.html" onclick="closeMenu()">Produtos</a>
+                <a href="sobre.html" onclick="closeMenu()">Sobre</a>
+                <a href="blog.html" onclick="closeMenu()">Blog</a>
+                <a href="contato.html" onclick="closeMenu()">Contato</a>
+            </div>
+        </div>
     </header>
 
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-
     <section class="hero">
-        <h1>Sobre Nós</h1>
+        <div>
+            <h1>Sobre Nós</h1>
+            <p>Conheça mais sobre a história e missão da Virtuosa Charme.</p>
+        </div>
     </section>
 
-    <div class="container">
-        <h2 class="section-title">Quem Somos</h2>
-        <p>Somos uma empresa dedicada à revenda de produtos de beleza, skincare e acessórios. Nosso objetivo é oferecer a melhor experiência em qualidade e atendimento. Ainda não somos uma marca própria, mas trabalhamos com produtos cuidadosamente selecionados para encantar nossos clientes.</p>
-        <p>Acreditamos que a beleza está nos detalhes, e queremos fazer parte da sua rotina, trazendo praticidade e confiança em cada compra.</p>
-    </div>
+    <section>
+        <h2>Quem Somos</h2>
+        <p>A Virtuosa Charme nasceu com o propósito de oferecer sofisticação e beleza para todas as mulheres. Nossa missão é disponibilizar produtos de alta qualidade, com um atendimento personalizado e uma experiência única de compra.</p>
+    </section>
 
     <footer>
         <p>&copy; 2025 Virtuosa Charme. Todos os direitos reservados.</p>
+        <p><a href="contato.html">Fale Conosco</a></p>
     </footer>
-</body>
-</html>
+
+    <script>
+        function togg

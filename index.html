@@ -11,6 +11,7 @@
             padding: 0;
             background-color: #0b0b13;
             color: #fff;
+            overflow-x: hidden;
         }
 
         header {
@@ -23,16 +24,18 @@
         }
 
         .header-container {
-            max-width: 1200px; /* Limite de largura */
-            margin: 0 auto; /* Centraliza o cabeçalho */
-            padding: 10px 20px; /* Espaçamento interno */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         header img {
             max-width: 150px;
+            height: auto;
         }
 
         nav {
@@ -41,19 +44,99 @@
         }
 
         nav a {
-        text-decoration: none;
-        color: #e0d4c3;
-        font-size: 1.25rem; /* Aumentado de 1rem para 1.25rem */
-        font-weight: bold; /* Adicionado para dar mais destaque */
-        transition: color 0.3s;
-    }
+            text-decoration: none;
+            color: #e0d4c3;
+            font-size: 1.25rem;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
 
-    nav a:hover {
-        color: #c3976e;
+        nav a:hover {
+            color: #c3976e;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 30px;
+            height: 5px;
+            background-color: #e0d4c3;
+            border-radius: 5px;
+        }
+
+        .mobile-nav {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background-color: rgba(21, 21, 30, 0.9);
+            text-align: center;
+            padding: 20px 0;
+            z-index: 999;
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav a {
+            display: block;
+            margin: 15px 0;
+            font-size: 1.5rem;
+            color: #e0d4c3;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .mobile-nav a:hover {
+            color: #c3976e;
+        }
+
+        /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                padding: 0;
+            }
+
+            header img {
+                max-width: 100%; /* Logo ocupa toda a largura do cabeçalho */
+                height: auto;
+            }
+
+            .menu-toggle {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                max-width: 100%; /* Mantém o ajuste para telas menores */
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
         }
 
         .hero {
-            margin-top: 80px; /* Compensa a altura do cabeçalho fixo */
+            margin-top: 80px;
             height: 100vh;
             background: url('images/background.jpg') no-repeat center center/cover;
             display: flex;
@@ -65,13 +148,13 @@
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin-bottom: 10px;
             font-weight: 600;
         }
 
         .hero p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             margin-bottom: 20px;
         }
 
@@ -140,9 +223,15 @@
 
         footer {
             background-color: #15151e;
-            padding: 20px;
+            padding: 20px 10px;
             text-align: center;
             color: #e0d4c3;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
         }
 
         footer a {
@@ -159,6 +248,11 @@
     <header>
         <div class="header-container">
             <img src="images/Logo Virtuosa Charme.png" alt="Logo Virtuosa Charme">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <nav>
                 <a href="index.html">Início</a>
                 <a href="produtos.html">Produtos</a>
@@ -166,8 +260,27 @@
                 <a href="blog.html">Blog</a>
                 <a href="contato.html">Contato</a>
             </nav>
+            <div class="mobile-nav">
+                <a href="index.html" onclick="closeMenu()">Início</a>
+                <a href="produtos.html" onclick="closeMenu()">Produtos</a>
+                <a href="sobre.html" onclick="closeMenu()">Sobre</a>
+                <a href="blog.html" onclick="closeMenu()">Blog</a>
+                <a href="contato.html" onclick="closeMenu()">Contato</a>
+            </div>
         </div>
     </header>
+
+    <script>
+        function toggleMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const mobileNav = document.querySelector('.mobile-nav');
+            mobileNav.classList.remove('active');
+        }
+    </script>
 
     <section class="hero">
         <div>

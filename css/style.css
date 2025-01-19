@@ -1,71 +1,195 @@
-/* Reset básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo global */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0b13;
+    color: #fff;
+    overflow-x: hidden;
 }
 
 header {
-    text-align: center;
-    margin-bottom: 40px;
+    background-color: rgba(21, 21, 30, 0.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
-.logo-container img {
-    width: 200px; /* Ajuste o tamanho da logo conforme necessário */
-    max-width: 100%;
-    height: auto;
+.header-container {
+    max-width: 1200px;
     margin: 0 auto;
-    display: block;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header img {
+    max-width: 150px;
+    height: auto;
 }
 
 nav {
-    text-align: center;
-    margin-bottom: 40px;
+    display: flex;
+    gap: 20px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin: 0 15px;
+    color: #e0d4c3;
+    font-size: 1.25rem;
     font-weight: bold;
-    font-size: 16px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #b78c3a; /* Cor dourada */
+    color: #c3976e;
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: justify;
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 }
 
-h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+.menu-toggle div {
+    width: 30px;
+    height: 5px;
+    background-color: #e0d4c3;
+    border-radius: 5px;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: rgba(21, 21, 30, 0.9);
     text-align: center;
-    color: #b78c3a;
+    padding: 20px 0;
+    z-index: 999;
 }
 
-p {
-    font-size: 18px;
-    line-height: 1.6;
+.mobile-nav.active {
+    display: block;
+}
+
+.mobile-nav a {
+    display: block;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: #e0d4c3;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    color: #c3976e;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    header img {
+        max-width: 100%; /* Logo ocupa toda a largura do cabeçalho */
+        height: auto;
+    }
+
+    .menu-toggle {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 10px;
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        max-width: 100%; /* Mantém o ajuste para telas menores */
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+}
+
+.hero {
+    margin-top: 80px;
+    height: 100vh;
+    background: url('images/background.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
     margin-bottom: 20px;
+}
+
+.hero a {
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #c3976e;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero a:hover {
+    background-color: #9f7454;
+}
+
+/* Seções comuns */
+section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 footer {
+    background-color: #15151e;
+    padding: 20px 10px;
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    font-size: 14px;
+    color: #e0d4c3;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer a {
+    color: #c3976e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
